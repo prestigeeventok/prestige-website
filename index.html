@@ -88,7 +88,6 @@
   background-color: black;
   color: white;
   margin: 0;
-  padding-top: 140px;
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
 }
@@ -124,14 +123,16 @@
   height: 140px;
 }
     .hero {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 0;
+}
     .hero h1 {
 
       position: relative;
@@ -163,7 +164,7 @@
     </div>
   </nav>
 
-  <div class="hero" style="position: relative; z-index: 1;">
+  <div class="hero">
     <div class="image-slider">
   <img src="hero1.jpg" alt="Event Picture 1" aria-hidden="true">
   <img src="hero2.jpg" alt="Event Picture 2">
