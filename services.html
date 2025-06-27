@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Prestige Event Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Prestige Event Services</title>
   <style>
     @font-face {
       font-family: 'FuturaCyrillic';
@@ -12,40 +12,26 @@
     }
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
     body {
-      margin: 0;
       font-family: 'FuturaCyrillic', sans-serif;
-      background-color: #000;
+      background-color: black;
       color: white;
-      opacity: 0;
-      animation: fadeInUp 0.6s ease forwards;
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+      margin: 0;
+      overflow-x: hidden;
     }
     nav {
-      background: rgba(0, 0, 0, 0.95);
+      background: transparent;
       padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
     }
     nav a {
       color: white;
@@ -53,110 +39,43 @@
       margin-left: 20px;
       font-size: 1.2rem;
     }
-    nav a:hover {
-      text-decoration: underline;
+    nav img {
+      height: 140px;
     }
-    .container {
-      max-width: 1000px;
-      margin: 80px auto 40px auto;
-      padding: 20px;
-    }
-    .header-image {
-      position: relative;
-      background: url('services-banner.jpg') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .content {
+      padding-top: 160px;
       text-align: center;
-      color: white;
     }
-    .header-image h1 {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      font-size: 2rem;
+    .footer-social {
+      text-align: center;
+      margin: 60px 0 30px 0;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-    .service img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .service p {
-      margin-top: 10px;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 8px;
-      color: white;
+    .footer-social img {
+      height: 30px;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html"><img src="LogoWhite.png" alt="Prestige Logo" style="height: 120px;"></a>
-    <div>
+    <a href="index.html"><img src="LogoWhite.png" alt="Prestige Logo"></a>
+    <div style="margin-right: 0; display: flex; gap: 10px;">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <div class="header-image">
-    <h1>We offer a wide range of services tailored for unforgettable events. From sound and visuals to staging and entertainment, Prestige Event Services is your one-stop event production partner.</h1>
+  <div class="content">
+    <h1>Our Services</h1>
+    <p>Here are the services we offer. More detailed visuals and descriptions can be added below.</p>
+    <!-- Services grid goes here -->
   </div>
 
-  <div class="container">
-    <div class="grid">
-      <div class="service fade-in">
-        <img src="audio.jpg" alt="Audio">
-        <p>High-quality audio setups for clear, crisp sound at any scale—from intimate meetings to large-scale concerts.</p>
-      </div>
-
-      <div class="service fade-in">
-        <img src="visual.jpg" alt="Visual">
-        <p>Professional lighting and video systems that bring your event atmosphere to life.</p>
-      </div>
-
-      <div class="service fade-in">
-        <img src="staging.jpg" alt="Staging">
-        <p>Custom staging solutions built for safety, versatility, and strong visual presence. Whether it is a mobile stage or modular stage we have the ability to help you elevate your event.</p>
-      </div>
-
-      <div class="service fade-in">
-        <img src="entertainment.jpg" alt="Entertainment">
-        <p>Live DJ sets, MCs, and performance artists tailored to fit your event's vibe and audience. We can help with booking the right entertainment for your event.</p>
-      </div>
-    </div>
+  <div class="footer-social">
+    <a href="https://facebook.com/prestigeeventok" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook"></a>
+    <a href="https://instagram.com/prestigeeventok" target="_blank"><img src="Instagram_Glyph_White.png" alt="Instagram"></a>
+    <a href="https://linkedin.com/prestigeeventok" target="_blank"><img src="InBug-White.png" alt="LinkedIn"></a>
   </div>
-
-  <div style="margin: 60px 0 30px 0; text-align: center;">
-    <a href="https://facebook.com/prestigeeventok" target="_blank" style="margin: 0 10px;">
-      <img src="Facebook_Logo_Secondary.png" alt="Facebook" style="height: 30px;">
-    </a>
-    <a href="https://instagram.com/prestigeeventok" target="_blank" style="margin: 0 10px;">
-      <img src="Instagram_Glyph_White.png" alt="Instagram" style="height: 30px;">
-    </a>
-    <a href="https://linkedin.com/prestigeeventok" target="_blank" style="margin: 0 10px;">
-      <img src="linkedin.png" alt="LinkedIn" style="height: 30px;">
-    </a>
-  </div>
-
-  <script>
-    const fadeIns = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeIns.forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
