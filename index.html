@@ -5,27 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prestige Event Services</title>
   <style>
-    .image-slider {
-      position: absolute;
+    @font-face {
+      font-family: 'FuturaCyrillic';
+      src: url('FuturaCyrillicBold.ttf') format('truetype');
+      font-weight: bold;
+    }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'FuturaCyrillic', sans-serif;
+      background-color: black;
+      color: white;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      z-index: 3;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.2rem;
+    }
+    nav img {
+      height: 140px;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .image-slider {
+      position: absolute;
+      inset: 0;
       z-index: 0;
     }
     .image-slider img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: fadeImages 36s infinite;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  z-index: 0;
-}
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fadeImages 36s infinite;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      z-index: 0;
+    }
     .image-slider img:nth-child(1) { animation-delay: 0s; }
     .image-slider img:nth-child(2) { animation-delay: 6s; }
     .image-slider img:nth-child(3) { animation-delay: 12s; }
@@ -34,79 +76,21 @@
     .image-slider img:nth-child(6) { animation-delay: 30s; }
 
     @keyframes fadeImages {
-  0%, 16.66% { opacity: 1; z-index: 1; }
-  16.67%, 100% { opacity: 0; z-index: 0; }
-}
-@font-face {
-      font-family: 'FuturaCyrillic';
-      src: url('FuturaCyrillicBold.ttf') format('truetype');
-      font-weight: bold;
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      25% { opacity: 1; }
+      30% { opacity: 0; }
+      100% { opacity: 0; }
     }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-  font-family: 'FuturaCyrillic', sans-serif;
-  background-color: black;
-  color: white;
-  margin: 0;
-  padding-top: 140px;
-  opacity: 0;
-  animation: fadeInUp 0.6s ease forwards;
-}
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    nav {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-}
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 1.2rem;
-    }
-    nav img {
-  height: 140px;
-}
-    .hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  margin-top: 0;
-  padding-top: 0;
-}
-    .hero h1 {
 
+    .hero h1 {
       position: relative;
-      z-index: 1;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      font-size: 2rem;
-    
-  transition: opacity 1s ease;
-}
+      z-index: 2;
+      font-size: 3rem;
+      color: white;
+      transition: opacity 1s ease;
+    }
+
     .footer-social {
       text-align: center;
       margin: 60px 0 30px 0;
@@ -127,17 +111,16 @@
     </div>
   </nav>
 
-  <div class="hero" style="position: relative; z-index: 1;">
-    <div class="image-slider" style="z-index: 0;">
-  <img src="hero1.jpg" alt="Event Picture 1" aria-hidden="true">
-  <img src="hero2.jpg" alt="Event Picture 2">
-  <img src="hero3.jpg" alt="Event Picture 3">
-  <img src="hero4.jpg" alt="Event Picture 4">
-  <img src="hero5.jpg" alt="Event Picture 5">
-  <img src="hero6.jpg" alt="Event Picture 6">
-</div>
-    <button id="toggleSlider" style="position: absolute; bottom: 20px; right: 20px; z-index: 2; background: rgba(0,0,0,0.6); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; display: flex; align-items: center; justify-content: center;">❚❚</button>
-    <h1 id="heroTitle" style="opacity: 1; transition: opacity 1s ease;">Welcome to Prestige Event Services</h1>
+  <div class="hero">
+    <div class="image-slider">
+      <img src="hero1.jpg" alt="Event Picture 1" aria-hidden="true">
+      <img src="hero2.jpg" alt="Event Picture 2" aria-hidden="true">
+      <img src="hero3.jpg" alt="Event Picture 3" aria-hidden="true">
+      <img src="hero4.jpg" alt="Event Picture 4" aria-hidden="true">
+      <img src="hero5.jpg" alt="Event Picture 5" aria-hidden="true">
+      <img src="hero6.jpg" alt="Event Picture 6" aria-hidden="true">
+    </div>
+    <h1 id="heroTitle">Welcome to Prestige Event Services</h1>
   </div>
 
   <div class="footer-social">
@@ -145,24 +128,14 @@
     <a href="https://instagram.com/prestigeeventok" target="_blank"><img src="Instagram_Glyph_White.png" alt="Instagram"></a>
     <a href="https://linkedin.com/prestigeeventok" target="_blank"><img src="InBug-White.png" alt="LinkedIn"></a>
   </div>
-<script>
-  const toggleBtn = document.getElementById('toggleSlider');
-  const images = document.querySelectorAll('.image-slider img');
-  let isPaused = false;
-  toggleBtn.addEventListener('click', () => {
-    isPaused = !isPaused;
-    images.forEach(img => {
-      img.style.animationPlayState = isPaused ? 'paused' : 'running';
-    });
-    toggleBtn.textContent = isPaused ? '▶' : '❚❚';
-  });
-  const heroTitle = document.getElementById('heroTitle');
-  setTimeout(() => {
-  const heroTitle = document.getElementById('heroTitle');
-  if (heroTitle) {
-    heroTitle.style.opacity = '0';
-  }
-}, 4000);
-</script>
+
+  <script>
+    const heroTitle = document.getElementById('heroTitle');
+    setTimeout(() => {
+      if (heroTitle) {
+        heroTitle.style.opacity = '0';
+      }
+    }, 4000);
+  </script>
 </body>
 </html>
