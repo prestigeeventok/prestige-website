@@ -19,32 +19,23 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-      animation: slideFade 36s infinite ease-in-out;
       opacity: 0;
+      animation: fadeImages 36s infinite;
     }
-    .image-slider img:nth-child(1) {
-      animation-delay: 0s;
+    .image-slider img:nth-child(1) { animation-delay: 0s; }
+    .image-slider img:nth-child(2) { animation-delay: 6s; }
+    .image-slider img:nth-child(3) { animation-delay: 12s; }
+    .image-slider img:nth-child(4) { animation-delay: 18s; }
+    .image-slider img:nth-child(5) { animation-delay: 24s; }
+    .image-slider img:nth-child(6) { animation-delay: 30s; }
+
+    @keyframes fadeImages {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      25% { opacity: 1; }
+      30% { opacity: 0; }
+      100% { opacity: 0; }
     }
-    .image-slider img:nth-child(2) {
-      animation-delay: 6s;
-    }
-    .image-slider img:nth-child(3) {
-      animation-delay: 18s;
-    }
-    .image-slider img:nth-child(4) {
-  animation-delay: 12s;
-}
-.image-slider img:nth-child(5) {
-  animation-delay: 24s;
-}
-.image-slider img:nth-child(6) {
-  animation-delay: 30s;
-}
 
 @keyframes slideFade {
   0% { opacity: 0; }
@@ -162,14 +153,14 @@
   </nav>
 
   <div class="hero" style="position: relative; z-index: 1;">
-    <div class="image-slider" style="z-index: -1;">
-      <img src="hero1.jpg" alt="Event Picture 1">
-      <img src="hero2.jpg" alt="Event Picture 2">
-      <img src="hero3.jpg" alt="Event Picture 3">
-      <img src="hero4.jpg" alt="Event Picture 4">
-      <img src="hero5.jpg" alt="Event Picture 5">
-      <img src="hero6.jpg" alt="Event Picture 6">
-    </div>
+    <div class="image-slider">
+  <img src="hero1.jpg" alt="Event Picture 1">
+  <img src="hero2.jpg" alt="Event Picture 2">
+  <img src="hero3.jpg" alt="Event Picture 3">
+  <img src="hero4.jpg" alt="Event Picture 4">
+  <img src="hero5.jpg" alt="Event Picture 5">
+  <img src="hero6.jpg" alt="Event Picture 6">
+</div>
     <button id="toggleSlider" style="position: absolute; bottom: 20px; right: 20px; z-index: 2; background: rgba(0,0,0,0.6); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; display: flex; align-items: center; justify-content: center;">❚❚</button>
     <h1 id="heroTitle" style="opacity: 1; transition: opacity 1s ease;">Welcome to Prestige Event Services</h1>
   </div>
