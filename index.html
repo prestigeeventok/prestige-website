@@ -18,8 +18,13 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover; left: 0; top: 0;
-      animation: slideFade 36s infinite ease-in-out; left: 0; top: 0;
+      object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+      animation: slideFade 36s infinite ease-in-out;
       opacity: 0;
     }
     .image-slider img:nth-child(1) {
@@ -42,7 +47,17 @@
 }
 
 @keyframes slideFade {
-  0% { transform: translateX(100%) scale(1.05); opacity: 0; }
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+  10% { opacity: 1; }
+  30% { transform: translateX(0) scale(1); opacity: 1; }
+  40% { transform: translateX(-100%) scale(1.05); opacity: 0; }
+  100% { transform: translateX(-100%) scale(1.05); opacity: 0; }
+}
   10% { transform: translateX(0) scale(1); opacity: 1; }
   30% { transform: translateX(0) scale(1); opacity: 1; }
   40% { transform: translateX(-100%) scale(1.05); opacity: 0; }
