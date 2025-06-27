@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Prestige Event Services</title>
+  <style>
+    @font-face {
+      font-family: 'FuturaCyrillic';
+      src: url('FuturaCyrillicBold.ttf') format('truetype');
+      font-weight: bold;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'FuturaCyrillic', sans-serif;
+      background-color: #000;
+      color: white;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.95);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1.2rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 80px auto 40px auto;
+      padding: 20px;
+    }
+    .header-image {
+      position: relative;
+      background: url('services-banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .header-image h1 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    .service img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .service p {
+      margin-top: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html"><img src="LogoWhite.png" alt="Prestige Logo" style="height: 50px;"></a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+
+  <div class="header-image">
+    <h1>We offer a wide range of services tailored for unforgettable events. From sound and visuals to staging and entertainment, Prestige Event Services is your one-stop event production partner.</h1>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      <div class="service fade-in">
+        <img src="audio.jpg" alt="Audio Services">
+        <p>High-quality audio setups for clear, crisp sound at any scale—from intimate meetings to large-scale concerts.</p>
+      </div>
+
+      <div class="service fade-in">
+        <img src="visual.jpg" alt="Visual Services">
+        <p>Professional lighting and video systems that bring your event atmosphere to life.</p>
+      </div>
+
+      <div class="service fade-in">
+        <img src="staging.jpg" alt="Staging Services">
+        <p>Custom staging solutions built for safety, versatility, and strong visual presence. Whether it is a mobile stage or modular stage we have the ability to help you elevate your event.</p>
+      </div>
+
+      <div class="service fade-in">
+        <img src="entertainment.jpg" alt="Entertainment">
+        <p>Live DJ sets, MCs, and performance artists tailored to fit your event's vibe and audience. We can help with booking the right entertainment for your event.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin: 60px 0 30px 0; text-align: center;">
+    <a href="https://facebook.com/prestigeeventok" target="_blank" style="margin: 0 10px;">
+      <img src="facebook.png" alt="Facebook" style="height: 30px;">
+    </a>
+    <a href="https://instagram.com/prestigeeventok" target="_blank" style="margin: 0 10px;">
+      <img src="instagram.png" alt="Instagram" style="height: 30px;">
+    </a>
+    <a href="https://linkedin.com/prestigeeventok" target="_blank" style="margin: 0 10px;">
+      <img src="linkedin.png" alt="LinkedIn" style="height: 30px;">
+    </a>
+  </div>
+
+  <script>
+    const fadeIns = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeIns.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
