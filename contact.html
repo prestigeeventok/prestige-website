@@ -17,7 +17,9 @@
     body {
       font-family: 'FuturaCyrillic', sans-serif;
       background-color: black;
-      color: white;
+      color: white;
+      margin: 0;
+    }
     nav {
       background: transparent;
       padding: 15px 20px;
@@ -39,17 +41,60 @@
     nav img {
       height: 140px;
     }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+    @media (max-width: 768px) {
+      nav div#nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
     .content {
       padding-top: 160px;
       text-align: center;
     }
-    iframe {
-      border: none;
-      width: 90%;
-      max-width: 700px;
-      height: 1350px;
+    form {
+      max-width: 600px;
       margin: 0 auto;
-      display: block;
+      text-align: left;
+      padding: 10px 20px 30px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button[type="submit"] {
+      background-color: white;
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
     .footer-social {
       text-align: center;
@@ -67,11 +112,22 @@
       opacity: 0.8;
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 </head>
 <body>
   <nav>
     <a href="index.html"><img src="LogoWhite.png" alt="Prestige Logo"></a>
-    <div style="margin-right: 100px; display: flex; gap: 25px; font-family: 'FuturaCyrillic', sans-serif;">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="nav-links" style="margin-right: 100px; display: flex; gap: 25px; font-family: 'FuturaCyrillic', sans-serif;">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
@@ -81,26 +137,26 @@
   <div class="content">
     <h1>Contact Us</h1>
     <p>We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
-    <form action="https://formspree.io/f/mnqepogv" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left; padding: 10px 20px 30px;">
+    <form action="https://formspree.io/f/mnqepogv" method="POST">
       <label for="name">Name</label><br>
-      <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: none; border-radius: 5px; font-size: 1rem;"><br>
+      <input type="text" id="name" name="name" required><br>
 
       <label for="email">Email</label><br>
-      <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: none; border-radius: 5px; font-size: 1rem;"><br>
+      <input type="email" id="email" name="email" required><br>
 
       <label for="phone">Phone Number</label><br>
-      <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+      <input type="tel" id="phone" name="phone" required><br>
 
       <label for="location">Event/Rental Location</label><br>
-      <input type="text" id="location" name="location" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+      <input type="text" id="location" name="location" required><br>
 
       <label for="event_date">Event/Rental Start Date</label><br>
-      <input type="date" id="event_date" name="event_date" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+      <input type="date" id="event_date" name="event_date" required><br>
 
       <label for="message">Message</label><br>
-      <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+      <textarea id="message" name="message" rows="6" required></textarea><br>
 
-      <button type="submit" style="background-color: white; color: black; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; transition: background-color 0.3s ease;">Send</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 
@@ -113,5 +169,7 @@
     </a>
     <a href="https://linkedin.com/prestigeeventok" target="_blank">
       <img src="InBug-White.png" alt="LinkedIn">
+    </a>
+  </div>
 </body>
 </html>
