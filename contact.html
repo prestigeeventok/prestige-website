@@ -98,14 +98,20 @@
     }
     .footer-social {
       text-align: center;
-      margin: 60px 0 30px 0;
+      margin: 60px auto 30px auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
     }
     .footer-social img {
       height: 30px;
       margin: 0 10px;
-    }
-    .footer-social a img {
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      display: inline-block;
+      vertical-align: middle;
+      border: none;
+      outline: none;
     }
     .footer-social a:hover img {
       transform: scale(1.2);
@@ -136,33 +142,41 @@
 
   <div class="content">
     <h1>Contact Us</h1>
-    <p>We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
-    <form action="https://formspree.io/f/mnqepogv" method="POST">
-      <label for="name">Name</label><br>
-      <input type="text" id="name" name="name" required><br>
 
-      <label for="email">Email</label><br>
-      <input type="email" id="email" name="email" required><br>
+    <p style="margin-top: 20px; font-size: 1rem;">Office Hours: Monday – Friday, 9 AM – 5 PM<br>Phone: <a href="tel:4053005961" style="color: white; text-decoration: underline;">405-300-5961</a></p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
+      <div style="flex: 1; min-width: 300px; max-width: 600px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1322.4971557101812!2d-97.6085202!3d35.4690944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b2110023bb3c57%3A0x2df7266eac1eeff8!2sPrestige%20Event%20Services!5e0!3m2!1sen!2sus!4v1719433188417!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0; border-radius: 10px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      <div style="flex: 1; min-width: 300px; max-width: 600px;">
+        <form action="https://formspree.io/f/mnqepogv" method="POST">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name" required><br>
 
-      <label for="phone">Phone Number</label><br>
-      <input type="tel" id="phone" name="phone" required><br>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" required><br>
 
-      <label for="location">Event/Rental Location</label><br>
-      <input type="text" id="location" name="location" required><br>
+          <label for="phone">Phone Number</label><br>
+          <input type="tel" id="phone" name="phone" required><br>
 
-      <label for="event_date">Event/Rental Start Date</label><br>
-      <input type="date" id="event_date" name="event_date" required><br>
+          <label for="location">Event/Rental Location</label><br>
+          <input type="text" id="location" name="location" required><br>
 
-      <label for="message">Message</label><br>
-      <textarea id="message" name="message" rows="6" required></textarea><br>
+          <label for="event_date">Event/Rental Start Date</label><br>
+          <input type="date" id="event_date" name="event_date" required><br>
 
-      <button type="submit">Send</button>
-    </form>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="6" required></textarea><br>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </div>
 
   <div class="footer-social">
     <a href="https://facebook.com/prestigeeventok" target="_blank">
-      <img src="Facebook_Logo_Primary.png" alt="Facebook">
+      <img src="Facebook_Logo_Secondary.png" alt="Facebook">
     </a>
     <a href="https://instagram.com/prestigeeventok" target="_blank">
       <img src="Instagram_Glyph_White.png" alt="Instagram">
