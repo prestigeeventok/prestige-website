@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Prestige Event Services</title>
+  <title>Our Services - Prestige Event Services</title>
   <style>
     @font-face {
       font-family: 'FuturaCyrillic';
@@ -46,29 +46,6 @@
       padding-top: 160px;
       text-align: center;
     }
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 0 20px;
-    }
-    input, textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-    }
-    button {
-      padding: 12px;
-      font-size: 1rem;
-      background-color: white;
-      color: black;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
     .footer-social {
       text-align: center;
       margin: 60px 0 30px 0;
@@ -77,12 +54,21 @@
       height: 30px;
       margin: 0 10px;
     }
-  </style>
+      .service-item {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .service-item.visible {
+      opacity: 1;
+      transform: none;
+    }
+</style>
 </head>
 <body>
   <nav>
     <a href="index.html"><img src="LogoWhite.png" alt="Prestige Logo"></a>
-    <div style="margin-right: 20px; display: flex; gap: 10px;">
+    <div style="margin-right: 60px; display: flex; gap: 10px;">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
@@ -90,15 +76,45 @@
   </nav>
 
   <div class="content">
-    <h1>Contact Us</h1>
-    <p>Have questions or want to book an event? Reach out and we’ll get back to you shortly.</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p style="margin-top: 20px; font-size: 0.9rem; color: #ccc;">This form uses <a href="https://formspree.io" target="_blank" style="color: #fff; text-decoration: underline;">Formspree</a> for submission.</p>
+    <h1>Our Services</h1>
+    <p>Here are the services we offer. More detailed visuals and descriptions can be added below.</p>
+    <div class="services-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+  <div class="service-item">
+    <img src="audio.jpg" alt="Audio" style="width: 100%; border-radius: 10px;">
+    <h3>Audio</h3>
+    <p>Professional sound systems tailored for any event size.</p>
+  </div>
+  <div class="service-item">
+    <img src="video.jpg" alt="Video" style="width: 100%; border-radius: 10px;">
+    <h3>Video</h3>
+    <p>High-quality video production and projection solutions.</p>
+  </div>
+  <div class="service-item">
+    <img src="lighting.jpg" alt="Lighting" style="width: 100%; border-radius: 10px;">
+    <h3>Lighting</h3>
+    <p>Dynamic lighting to set the mood and enhance any venue.</p>
+  </div>
+  <div class="service-item">
+    <img src="entertainment.jpg" alt="Entertainment" style="width: 100%; border-radius: 10px;">
+    <h3>Entertainment</h3>
+    <p>Top-tier DJs and performers to keep your guests engaged.</p>
+  </div>
+  <div class="service-item">
+    <img src="staging.jpg" alt="Staging" style="width: 100%; border-radius: 10px;">
+    <h3>Staging</h3>
+    <p>Custom stage setups for concerts, conferences, and more.</p>
+  </div>
+  <div class="service-item">
+    <img src="event_management.jpg" alt="Event Management" style="width: 100%; border-radius: 10px;">
+    <h3>Event Management</h3>
+    <p>Full-service planning and coordination from start to finish.</p>
+  </div>
+  <div class="service-item">
+    <img src="event_design.jpg" alt="Event Design" style="width: 100%; border-radius: 10px;">
+    <h3>Event Design</h3>
+    <p>Creative visual themes and layouts tailored to your brand.</p>
+  </div>
+</div>
   </div>
 
   <div class="footer-social">
@@ -106,5 +122,19 @@
     <a href="https://instagram.com/prestigeeventok" target="_blank"><img src="Instagram_Glyph_White.png" alt="Instagram"></a>
     <a href="https://linkedin.com/prestigeeventok" target="_blank"><img src="InBug-White.png" alt="LinkedIn"></a>
   </div>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-item').forEach(item => {
+    observer.observe(item);
+  });
+</script>
 </body>
 </html>
