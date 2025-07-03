@@ -66,19 +66,27 @@
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #1a1a1a;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
     .service-item.visible {
       opacity: 1;
       transform: none;
     }
-      .footer-social a img {
+    .footer-social a img {
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
     .footer-social a:hover img {
+      height: 30px;
+      margin: 0 10px;
       transform: scale(1.2);
       opacity: 0.8;
+
     }
-</style>
+  </style>
 </head>
 <body>
   <nav>
@@ -92,52 +100,76 @@
 
   <div class="content">
     <h1>Our Services</h1>
+    <p style="max-width: 800px; margin: 20px auto; font-size: 1.1rem; line-height: 1.6; color: #ccc;">
+      At Prestige Event Services, we specialize in creating unforgettable experiences through cutting-edge audio, video, lighting, and event production solutions. Whether you're planning a corporate event, concert, wedding, or private celebration, our team is equipped to bring your vision to life with expert execution and attention to detail.
+    </p>
     <div class="services-grid">
-      <div class="service-item" style="border-radius: 10px; overflow: hidden; background-color: #1a1a1a; padding: 10px;">
-  <img src="audio.jpg" alt="Audio" style="width: 100%; border-radius: 10px 10px 0 0;">
-  <div style="padding: 10px;">
-    <h3 style="margin: 10px 0 5px;">Audio</h3>
-    <p style="margin: 0;">Professional sound systems tailored for any event size.</p>
-  </div>
+      <div class="service-item">
+        <img src="audio.jpg" alt="Audio" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Audio</h3>
+          <p style="margin: 0;">Professional sound systems tailored for any event size.</p>
+        </div>
       </div>
       <div class="service-item">
-        <img src="video.jpg" alt="Video" style="width: 100%; border-radius: 10px;">
-        <h3>Video</h3>
-        <p>High-quality video production and visual solutions.</p>
+        <img src="video.jpg" alt="Video" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Video</h3>
+          <p style="margin: 0;">High-quality video production and visual solutions.</p>
+        </div>
       </div>
       <div class="service-item">
-        <img src="lighting.jpg" alt="Lighting" style="width: 100%; border-radius: 10px;">
-        <h3>Lighting</h3>
-        <p>Dynamic lighting to set the mood and enhance any venue.</p>
+        <img src="lighting.jpg" alt="Lighting" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Lighting</h3>
+          <p style="margin: 0;">Dynamic lighting to set the mood and enhance any venue.</p>
+        </div>
       </div>
       <div class="service-item">
-        <img src="entertainment.jpg" alt="Entertainment" style="width: 100%; border-radius: 10px;">
-        <h3>Entertainment</h3>
-        <p>Top-tier DJs and Emcees to keep your guests engaged.</p>
+        <img src="entertainment.jpg" alt="Entertainment" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Entertainment</h3>
+          <p style="margin: 0;">Emcees to keep your guests engaged and Artist Bookings to rock the party.</p>
+        </div>
       </div>
       <div class="service-item">
-        <img src="staging.jpg" alt="Staging" style="width: 100%; border-radius: 10px;">
-        <h3>Staging</h3>
-        <p>Custom stage setups for concerts, conferences, and more.</p>
+        <img src="disc_jockeys.jpg" alt="Disc Jockeys" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Disc Jockeys</h3>
+          <p style="margin: 0;">Experienced DJs to energize the crowd and elevate your event.</p>
+        </div>
       </div>
       <div class="service-item">
-        <img src="event_management.jpg" alt="Event Management" style="width: 100%; border-radius: 10px;">
-        <h3>Event Management</h3>
-        <p>Full-service planning and coordination from start to finish.</p>
+        <img src="staging.jpg" alt="Staging" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Staging</h3>
+          <p style="margin: 0;">Custom stage setups for concerts, conferences, and more.</p>
+        </div>
       </div>
       <div class="service-item">
-        <img src="event_design.jpg" alt="Event Design" style="width: 100%; border-radius: 10px;">
-        <h3>Event Design</h3>
-        <p>Creative visual themes and layouts tailored to your brand.</p>
+        <img src="event_management.jpg" alt="Event Management" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Event Management</h3>
+          <p style="margin: 0;">Full-service planning and coordination from start to finish.</p>
+        </div>
       </div>
-    <div class="service-item">
-        <img src="special_effects.jpg" alt="Special Effects" style="width: 100%; border-radius: 10px;">
-        <h3>Special Effects</h3>
-        <p>Enhance your event with CO2 blasts, confetti, fog, haze, and more.</p>
+      <div class="service-item">
+        <img src="event_design.jpg" alt="Event Design" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Event Design</h3>
+          <p style="margin: 0;">Creative visual themes and layouts tailored to your brand.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <img src="special_effects.jpg" alt="Special Effects" style="width: 100%; border-radius: 10px 10px 0 0;">
+        <div style="padding: 10px;">
+          <h3 style="margin: 10px 0 5px;">Special Effects</h3>
+          <p style="margin: 0;">Enhance your event with CO2 blasts, confetti, fog, haze, and more.</p>
+        </div>
       </div>
     </div>
 
-    <a href="https://facebook.com/prestigeeventok" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook" style="height: 30px;"></a>
+    <a href="https://facebook.com/prestigeeventok" target="_blank"><img src="Facebook_Logo_secondary.png" alt="Facebook" style="height: 30px;"></a>
     <a href="https://instagram.com/prestigeeventok" target="_blank"><img src="Instagram_Glyph_White.png" alt="Instagram" style="height: 30px;"></a>
     <a href="https://linkedin.com/prestigeeventok" target="_blank"><img src="InBug-White.png" alt="LinkedIn" style="height: 30px;"></a>
   </div>
