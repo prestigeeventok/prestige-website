@@ -15,23 +15,26 @@
       overflow-x: hidden;
     }
     body {
-      font-family: 'FuturaCyrillic', sans-serif;
-      background-color: black;
-      color: white;
-      margin: 0;
-    }
+  font-family: 'FuturaCyrillic', sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding-top: 160px;
+  overflow-x: hidden;
+}
     nav {
-      background: transparent;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 3;
-    }
+  background: transparent;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
     nav a {
       color: white;
       text-decoration: none;
@@ -53,16 +56,26 @@
       margin: 4px 0;
     }
     @media (max-width: 768px) {
-      nav div#nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: black;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 5px;
-      }
+  nav div#nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .content {
+    padding-top: 180px;
+  }
+  form {
+    padding: 10px;
+  }
+}
       .hamburger {
         display: flex;
       }
@@ -149,7 +162,7 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1322.4971557101812!2d-97.6085202!3d35.4690944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b2110023bb3c57%3A0x2df7266eac1eeff8!2sPrestige%20Event%20Services!5e0!3m2!1sen!2sus!4v1719433188417!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0; border-radius: 10px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
       <div style="flex: 1; min-width: 300px; max-width: 600px;">
-        <form action="https://formspree.io/f/xwpbzadr" method="POST">
+        <form action="https://formspree.io/f/mqabjwdk" method="POST">
           <label for="name">Name</label><br>
           <input type="text" id="name" name="name" required><br>
 
