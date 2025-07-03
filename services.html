@@ -54,7 +54,15 @@
       height: 30px;
       margin: 0 10px;
     }
-      .service-item {
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .service-item {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -63,7 +71,7 @@
       opacity: 1;
       transform: none;
     }
-</style>
+  </style>
 </head>
 <body>
   <nav>
@@ -77,64 +85,68 @@
 
   <div class="content">
     <h1>Our Services</h1>
-    <p>Here are the services we offer. More detailed visuals and descriptions can be added below.</p>
-    <div class="services-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-  <div class="service-item">
-    <img src="audio.jpg" alt="Audio" style="width: 100%; border-radius: 10px;">
-    <h3>Audio</h3>
-    <p>Professional sound systems tailored for any event size.</p>
-  </div>
-  <div class="service-item">
-    <img src="video.jpg" alt="Video" style="width: 100%; border-radius: 10px;">
-    <h3>Video</h3>
-    <p>High-quality video production and projection solutions.</p>
-  </div>
-  <div class="service-item">
-    <img src="lighting.jpg" alt="Lighting" style="width: 100%; border-radius: 10px;">
-    <h3>Lighting</h3>
-    <p>Dynamic lighting to set the mood and enhance any venue.</p>
-  </div>
-  <div class="service-item">
-    <img src="entertainment.jpg" alt="Entertainment" style="width: 100%; border-radius: 10px;">
-    <h3>Entertainment</h3>
-    <p>Top-tier DJs and performers to keep your guests engaged.</p>
-  </div>
-  <div class="service-item">
-    <img src="staging.jpg" alt="Staging" style="width: 100%; border-radius: 10px;">
-    <h3>Staging</h3>
-    <p>Custom stage setups for concerts, conferences, and more.</p>
-  </div>
-  <div class="service-item">
-    <img src="event_management.jpg" alt="Event Management" style="width: 100%; border-radius: 10px;">
-    <h3>Event Management</h3>
-    <p>Full-service planning and coordination from start to finish.</p>
-  </div>
-  <div class="service-item">
-    <img src="event_design.jpg" alt="Event Design" style="width: 100%; border-radius: 10px;">
-    <h3>Event Design</h3>
-    <p>Creative visual themes and layouts tailored to your brand.</p>
-  </div>
-</div>
-  </div>
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="audio.jpg" alt="Audio" style="width: 100%; border-radius: 10px;">
+        <h3>Audio</h3>
+        <p>Professional sound systems tailored for any event size.</p>
+      </div>
+      <div class="service-item">
+        <img src="video.jpg" alt="Video" style="width: 100%; border-radius: 10px;">
+        <h3>Video</h3>
+        <p>High-quality video production and projection solutions.</p>
+      </div>
+      <div class="service-item">
+        <img src="lighting.jpg" alt="Lighting" style="width: 100%; border-radius: 10px;">
+        <h3>Lighting</h3>
+        <p>Dynamic lighting to set the mood and enhance any venue.</p>
+      </div>
+      <div class="service-item">
+        <img src="entertainment.jpg" alt="Entertainment" style="width: 100%; border-radius: 10px;">
+        <h3>Entertainment</h3>
+        <p>Top-tier DJs and performers to keep your guests engaged.</p>
+      </div>
+      <div class="service-item">
+        <img src="staging.jpg" alt="Staging" style="width: 100%; border-radius: 10px;">
+        <h3>Staging</h3>
+        <p>Custom stage setups for concerts, conferences, and more.</p>
+      </div>
+      <div class="service-item">
+        <img src="event_management.jpg" alt="Event Management" style="width: 100%; border-radius: 10px;">
+        <h3>Event Management</h3>
+        <p>Full-service planning and coordination from start to finish.</p>
+      </div>
+      <div class="service-item">
+        <img src="event_design.jpg" alt="Event Design" style="width: 100%; border-radius: 10px;">
+        <h3>Event Design</h3>
+        <p>Creative visual themes and layouts tailored to your brand.</p>
+      </div>
+    <div class="service-item">
+        <img src="special_effects.jpg" alt="Special Effects" style="width: 100%; border-radius: 10px;">
+        <h3>Special Effects</h3>
+        <p>Enhance your event with CO2 blasts, confetti, sparklers, and more.</p>
+      </div>
+    </div>
 
-  <div class="footer-social">
+$1>
     <a href="https://facebook.com/prestigeeventok" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook"></a>
     <a href="https://instagram.com/prestigeeventok" target="_blank"><img src="Instagram_Glyph_White.png" alt="Instagram"></a>
     <a href="https://linkedin.com/prestigeeventok" target="_blank"><img src="InBug-White.png" alt="LinkedIn"></a>
   </div>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.service-item').forEach(item => {
-    observer.observe(item);
-  });
-</script>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-item').forEach(item => {
+      observer.observe(item);
+    });
+  </script>
 </body>
 </html>
