@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Prestige Event Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Prestige Event Services</title>
   <style>
     @font-face {
       font-family: 'FuturaCyrillic';
@@ -15,12 +15,8 @@
       overflow-x: hidden;
     }
     body {
-      font-family: 'FuturaCyrillic', sans-serif;
       background-color: black;
-      color: white;
-      margin: 0;
-      overflow-x: hidden;
-    }
+      color: white;
     nav {
       background: transparent;
       padding: 15px 20px;
@@ -46,28 +42,13 @@
       padding-top: 160px;
       text-align: center;
     }
-    form {
-      max-width: 600px;
+    iframe {
+      border: none;
+      width: 90%;
+      max-width: 700px;
+      height: 1350px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 0 20px;
-    }
-    input, textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-    }
-    button {
-      padding: 12px;
-      font-size: 1rem;
-      background-color: white;
-      color: black;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      display: block;
     }
     .footer-social {
       text-align: center;
@@ -77,12 +58,19 @@
       height: 30px;
       margin: 0 10px;
     }
+    .footer-social a img {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .footer-social a:hover img {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
   <nav>
     <a href="index.html"><img src="LogoWhite.png" alt="Prestige Logo"></a>
-    <div style="margin-right: 60px; margin-left: auto; display: flex; gap: 10px;">
+    <div style="margin-right: 60px; display: flex; gap: 10px;">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
@@ -92,12 +80,12 @@
   <div class="content">
     <h1>Contact Us</h1>
     <p>We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
-    <form action="https://formspree.io/f/mnqepogv" method="POST" style="max-width: 600px; margin: 40px auto; text-align: left; padding: 30px;">
+    <form action="https://formspree.io/f/mnqepogv" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left; padding: 10px 20px 30px;">
       <label for="name">Name</label><br>
       <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: none; border-radius: 5px; font-size: 1rem;"><br>
 
       <label for="email">Email</label><br>
-      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; margin-bottom: 20px; border: none; border-radius: 5px; font-size: 1rem;"><br>
 
       <label for="phone">Phone Number</label><br>
       <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
@@ -113,13 +101,16 @@
 
       <button type="submit" style="background-color: white; color: black; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 1rem; transition: background-color 0.3s ease;">Send</button>
     </form>
-    <p style="margin-top: 20px; font-size: 0.9rem; color: #ccc;">This form uses <a href="https://formspree.io" target="_blank" style="color: #fff; text-decoration: underline;">Formspree</a> for submission.</p>
   </div>
 
   <div class="footer-social">
-    <a href="https://facebook.com/prestigeeventok" target="_blank"><img src="Facebook_Logo_Primary.png" alt="Facebook"></a>
-    <a href="https://instagram.com/prestigeeventok" target="_blank"><img src="Instagram_Glyph_White.png" alt="Instagram"></a>
-    <a href="https://linkedin.com/prestigeeventok" target="_blank"><img src="InBug-White.png" alt="LinkedIn"></a>
-  </div>
+    <a href="https://facebook.com/prestigeeventok" target="_blank">
+      <img src="Facebook_Logo_Primary.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/prestigeeventok" target="_blank">
+      <img src="Instagram_Glyph_White.png" alt="Instagram">
+    </a>
+    <a href="https://linkedin.com/prestigeeventok" target="_blank">
+      <img src="InBug-White.png" alt="LinkedIn">
 </body>
 </html>
